@@ -39,6 +39,9 @@ images:画像用フォルダ
 
 コンパイラーをLatexに変更、main_thesis.texをmain　documentに設定
 
+2023/10/26
+梗概用テンプレート2022年のページ↓
+https://www.mlab.im.dendai.ac.jp/~assist/thesis/2022/
 
 
 # Graduation-thesis-template2023
