@@ -1,4 +1,4 @@
-卒論 with tex
+卒論 本論　with tex
 ===
 
 # Usage.
