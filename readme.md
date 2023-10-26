@@ -28,6 +28,8 @@ git commit
 # ブランチ作成
 git checkout -b template/12fi
 
+2023/10/26
+GitHubのテンプレートにしたため、上記の作業は不要？
 
 2023/01/04
 空白のテンプレート作成しました
@@ -37,7 +39,6 @@ images:画像用フォルダ
 
 コンパイラーをLatexに変更、main_thesis.texをmain　documentに設定
 
-2023/10/26
-GitHubのテンプレートにしたため、上記の作業は不要？
+
 
 # Graduation-thesis-template2023
