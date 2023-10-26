@@ -1,0 +1,195 @@
+
+\newcommand{\myfig}[4][width=14cm]{%
+  \begin{figure}[h]
+    \centering
+    \includegraphics[#1]{images/#2}
+    \caption{#3}
+    \label{fig:#4}
+  \end{figure}
+}
+
+\newcommand{\myfighalf}[4][width=7cm]{%
+  \begin{figure}[h]
+    \centering
+    \includegraphics[#1]{images/#2}
+    \caption{#3}
+    \label{fig:#4}
+  \end{figure}
+}
+
+\newcommand{\myfigdouble}[5][width=7cm]{
+  \begin{figure}[h]
+    \centering
+    \includegraphics[#1]{images/#2}
+    \includegraphics[#1]{images/#3}
+    \caption{#4}
+    \label{fig:#5}
+  \end{figure}
+}
+
+\newcommand{\myfigtwo}[7][width=7cm]{
+  \begin{figure}[htbp]
+   \begin{minipage}{0.5\hsize}
+    \begin{center}
+     \includegraphics[#1]{images/#2}
+    \end{center}
+    \caption{#3}
+    \label{fig:#4}
+   \end{minipage}
+   \begin{minipage}{0.5\hsize}
+    \begin{center}
+      \includegraphics[#1]{images/#5}
+    \end{center}
+    \caption{#6}
+    \label{fig:#7}
+   \end{minipage}
+  \end{figure}
+}
+
+\newcommand{\myfigthird}[9]{
+  \begin{figure}[htbp]
+   \begin{minipage}{0.33\hsize}
+    \begin{center}
+     \includegraphics[width=4.6cm]{images/#1}
+    \end{center}
+    \caption{#2}
+    \label{fig:#3}
+   \end{minipage}
+   \begin{minipage}{0.33\hsize}
+    \begin{center}
+     \includegraphics[width=4.6cm]{images/#4}
+    \end{center}
+    \caption{#5}
+    \label{fig:#6}
+   \end{minipage}
+   \begin{minipage}{0.33\hsize}
+    \begin{center}
+     \includegraphics[width=4.6cm]{images/#7}
+    \end{center}
+    \caption{#8}
+    \label{fig:#9}
+   \end{minipage}
+  \end{figure}
+}
+
+\newcommand{\myfigthirdset}[5]{
+  \begin{figure}[htbp]
+   \begin{minipage}{0.32\hsize}
+    \begin{center}
+     \includegraphics[width=4.6cm]{images/#1}
+    \end{center}
+   \end{minipage}
+   \begin{minipage}{0.32\hsize}
+    \begin{center}
+     \includegraphics[width=4.6cm]{images/#2}
+    \end{center}
+   \end{minipage}
+   \begin{minipage}{0.32\hsize}
+    \begin{center}
+     \includegraphics[width=4.6cm]{images/#3}
+    \end{center}
+   \end{minipage}
+   \caption{#4}
+   \label{fig:#5}
+  \end{figure}
+}
+
+\newcommand\figref[1]{図~\ref{fig:#1}}
+\newcommand\tabref[1]{表~\ref{tab:#1}}
+% \newcommand\figref[1]{(fig~\ref{fig:#1})}
+% \newcommand\tabref[1]{(table~\ref{tab:#1})}
+
+\newcommand{\chapterhead}[2]{
+    \stepcounter{chapter}%
+    \clearpage
+    \setcounter{section}{0}
+
+    \begin{center}
+        \vspace{0.5cm}
+        \huge{\bf 第{\thechapter}章}
+        % \huge{\bf Chapter {\thechapter}}
+        \par
+        \vspace{1cm}
+        \hrulefill
+        \par
+        \vspace{1cm}
+        \huge{\bf #1}
+        \par
+        \vspace{0.5cm}
+        \hrulefill
+        \vspace{1cm}
+        \par
+
+        %\normalsize
+        \begin{flushleft}
+            \large{{\bf #2}}
+        \end{flushleft}
+    \end{center}
+
+    \addcontentsline{toc}{chapter}{\protect\numberline{第{\thechapter}章}{#1}}
+    % \addcontentsline{toc}{chapter}{\protect\numberline{{\thechapter}}{#1}}
+
+    \pagestyle{plain}
+    % \cfoot{\thepage}
+    % \lhead{}
+    \rhead{}
+    \clearpage
+
+    \pagestyle{fancy}
+    \lhead{}
+    \rhead{第{\thechapter}章 #1}
+    % \rhead{Chapter {\thechapter} #1}
+}
+
+\newcommand{\mytable}[3]{
+    \begin{table}[htb]
+        \begin{center}
+            #3
+            \caption{#1}
+            \label{tab:#2}
+        \end{center}
+    \end{table}
+}
+
+
+\newcommand{\myappendix}[1]{
+    \newpage
+    \begin{figure}[htbp]
+        \begin{center}
+            \includegraphics{appendix/#1}
+        \end{center}
+    \end{figure}
+}
+
+\newcommand{\delete}[2]{
+  \def\reserved@a{#1}%
+  \def\reserved@c{}%
+  \def\@elt##1{%
+    \def\reserved@b{##1}%
+    \ifx\reserved@a\reserved@b
+    \else
+      \@cons\reserved@c{{##1}}%
+    \fi}%
+  \csname cl@#2\endcsname
+  \expandafter\let\csname cl@#2\endcsname\reserved@c
+  \let\@elt\relax
+}
+
+
+% for English
+% \sisetup{minimum-integer-digits=2}
+
+% \renewcommand{\figurename}{Fig.}
+% \renewcommand{\tablename}{Table.}
+
+%%\renewcommand{\prepartname}{第}
+%% \renewcommand{\postpartname}{部}
+%% \renewcommand{\contentsname}{目 次}
+%% \renewcommand{\listfigurename}{図 目 次}
+%% \renewcommand{\listtablename}{表 目 次}
+%% \renewcommand{\refname}{参考文献}
+%% \renewcommand{\indexname}{索 引}
+%% \renewcommand{\figurename}{図}
+%% \renewcommand{\tablename}{表}
+%% \renewcommand{\appendixname}{付 録}
+%% \renewcommand{\abstractname}{概 要}

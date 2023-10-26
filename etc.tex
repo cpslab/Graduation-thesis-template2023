@@ -1,0 +1,58 @@
+%%%%%%%%%%%% ------------ 2 page ------------  %%%%%%%%%%%%
+\newpage
+\pagestyle{plain}
+
+\begin{flushleft}
+{\huge{\bf 謝辞}}\\
+\vspace{1cm}
+% 感謝を述べましょう＾＾
+
+\vspace{3cm}
+\begin{flushright}
+20xx年x月xx日\\
+電大 太郎\\
+\end{flushright}
+\end{flushleft}
+
+% \addcontentsline{toc}{chapter}{}
+\newpage
+\begin{flushleft}
+{\huge{\bf 学外発表}}\\
+\vspace{1cm}
+\begin{enumerate}
+% enumerate　数字付き箇条書き
+\item \underline{電大太郎}，岩井 将行，"タイトル"，"学会名"，PaperID=？？？，20xx年x月発表予定
+
+\end{enumerate}
+\end{flushleft}
+
+% 参考文献
+\input{References}
+
+\chapter*{付録}\label{huroku}
+\addcontentsline{toc}{chapter}{付録}
+\begin{flushleft}
+付録として，〇〇学会に投稿した論文と，実験の様子を収めた写真を添付する．
+\end{flushleft}
+
+\newpage
+
+\newgeometry{left=2cm,bottom=2cm,top=2cm}
+\pagestyle{plain}
+
+% 学会用のpdfを添付する
+% \includepdf[pages=-]{フォルダ/ファイル名.pdf}
+
+\newpage
+\restoregeometry
+
+% 写真↓
+% \begin{center}
+%   \begin{figure}
+%     % \center
+%     \includegraphics[width=14cm]{appendix/yousu.png}
+%     \caption{実験の様子}
+%     \label{ex}
+%   \end{figure}
+% \end{center}
+% 参考：https://medemanabu.net/latex/graphicx-figure-includegraphics/
